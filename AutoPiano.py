@@ -35,10 +35,22 @@ class Song(object):
                 if(instrument == "beep"):
                     Beep(beep[tune], int(self.tempo))
                 else:
-                    instrument[tune].play()
+                    instrument.keys[tune].play()
                     sleep(self.tempo/1000)
             elif(tune == "  "):
                 sleep(self.tempo/1000)
+
+class Instrument(object):
+    def __init__(self, name):
+        self.name = name
+        self.keys = {}
+
+        for key in keys:
+            if(key != "  "):
+                self.keys[key] = pygame.mixer.Sound("Recordings\\"  + name + "\\" + key[1] + "\\" + key + ".wav")
+        
+GrandPiano = Instrument("Grand Piano")
+BrightPiano = Instrument("Bright Piano")
 
 FunkyTown = Song("Funky Town", sheetMusic.funkyTown, 250)
 FurElise = Song("Für Elise", sheetMusic.furElise, 250)
@@ -50,4 +62,4 @@ AveMaria = Song("Ave Maria", sheetMusic.aveMaria, 480)
 AllStar = Song("All Star", sheetMusic.allStar, 250)
 TwinkleTwinkle = Song("Twinkle Twinkle", sheetMusic.twinkleTwinkle, 250)
 
-FunkyTown.play(grandPiano)
+FunkyTown.play(BrightPiano)
