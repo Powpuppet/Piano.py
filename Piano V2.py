@@ -42,6 +42,8 @@ FurElise = Song("Für Elise", sheetMusic.furElise, 333)
 TakeOnMe = Song("Take On Me", sheetMusic.takeOnMe, 250)
 JingleBells = Song("Jingle Bells", sheetMusic.jingleBells, 250)
 LostWoods = Song("Lost Woods", sheetMusic.lostWoods, 250)
+ImBlue = Song("I'm Blue", sheetMusic.imBlue, 125)
+AveMaria = Song("Ave Maria", sheetMusic.aveMaria, 240)
 AllStar = Song("All Star", sheetMusic.allStar, 250)
 TwinkleTwinkle = Song("Twinkle Twinkle", sheetMusic.twinkleTwinkle, 250)
 
@@ -52,11 +54,11 @@ pygame.mixer.init()
 pygame.init()
 
 #Loading sound files for keys
-keySounds = {}
+grandPiano = {}
 for key in keys:
     if(key == "  "):
         continue
-    keySounds[key] = pygame.mixer.Sound("Piano Recording\\" + key[1] + "\\" + key + ".wav")
+    grandPiano[key] = pygame.mixer.Sound("Recordings\\"  + "Grand Piano\\" + key[1] + "\\" + key + ".wav")
     
 size = (700, 500)
 screen = pygame.display.set_mode(size)
@@ -79,73 +81,73 @@ while(not done):
             if(event.key == pygame.K_SPACE):
                 musicIndex = (musicIndex + 1) % len(musicList)
             elif(event.key == pygame.K_z):
-                keySounds["E3"].play()
+                grandPiano["E3"].play()
                 text = ("E3")
             elif(event.key == pygame.K_x):
-                keySounds["F3"].play()
+                grandPiano["F3"].play()
                 text = "F3"
             elif(event.key == pygame.K_c):
-                keySounds["G3"].play()
+                grandPiano["G3"].play()
                 text = "G3"
             elif(event.key == pygame.K_v):
-                keySounds["A3"].play()
+                grandPiano["A3"].play()
                 text = "A3"
             elif(event.key == pygame.K_b):
-                keySounds["B3"].play()
+                grandPiano["B3"].play()
                 text = "B3"
             elif(event.key == pygame.K_n):
-                keySounds["C4"].play()
+                grandPiano["C4"].play()
                 text = "C4"
             elif(event.key == pygame.K_m):
-                keySounds["D4"].play()
+                grandPiano["D4"].play()
                 text = "D4"
             elif(event.key == pygame.K_COMMA):
-                keySounds["E4"].play()
+                grandPiano["E4"].play()
                 text = "E4"
             elif(event.key == pygame.K_PERIOD):
-                keySounds["F4"].play()
+                grandPiano["F4"].play()
                 text = "F4"
             elif(event.key == pygame.K_a):
-                keySounds["G4"].play()
+                grandPiano["G4"].play()
                 text = "G4"
             elif(event.key == pygame.K_s):
-                keySounds["A4"].play()
+                grandPiano["A4"].play()
                 text = "A4"
             elif(event.key == pygame.K_d):
-                keySounds["B4"].play()
+                grandPiano["B4"].play()
                 text = "B4"
             elif(event.key == pygame.K_f):
-                keySounds["C5"].play()
+                grandPiano["C5"].play()
                 text = "C5"
             elif(event.key == pygame.K_g):
-                keySounds["D5"].play()
+                grandPiano["D5"].play()
                 text = "D5"
             elif(event.key == pygame.K_h):
-                keySounds["E5"].play()
+                grandPiano["E5"].play()
                 text = "E5"
             elif(event.key == pygame.K_j):
-                keySounds["F5"].play()
+                grandPiano["F5"].play()
                 text = "F5"
             elif(event.key == pygame.K_k):
-                keySounds["G5"].play()
+                grandPiano["G5"].play()
                 text = "G5"
             elif(event.key == pygame.K_l):
-                keySounds["A5"].play()
+                grandPiano["A5"].play()
                 text = "A5"
             elif(event.key == pygame.K_q):
-                keySounds["B5"].play()
+                grandPiano["B5"].play()
                 text = "B5"
             elif(event.key == pygame.K_w):
-                keySounds["C6"].play()
+                grandPiano["C6"].play()
                 text = "C6"
             elif(event.key == pygame.K_e):
-                keySounds["D6"].play()
+                grandPiano["D6"].play()
                 text = "D6"
             elif(event.key == pygame.K_r):
-                keySounds["E6"].play()
+                grandPiano["E6"].play()
                 text = "E6"
             elif(event.key == pygame.K_t):
-                keySounds["F6"].play()
+                grandPiano["F6"].play()
                 text = "F6"
             
             elif(event.key == pygame.K_o):

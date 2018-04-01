@@ -42,6 +42,8 @@ FurElise = Song("Für Elise", sheetMusic.furElise, 333)
 TakeOnMe = Song("Take On Me", sheetMusic.takeOnMe, 250)
 JingleBells = Song("Jingle Bells", sheetMusic.jingleBells, 250)
 LostWoods = Song("Lost Woods", sheetMusic.lostWoods, 250)
+ImBlue = Song("I'm Blue", sheetMusic.imBlue, 125)
+AveMaria = Song("Ave Maria", sheetMusic.aveMaria, 240)
 AllStar = Song("All Star", sheetMusic.allStar, 250)
 TwinkleTwinkle = Song("Twinkle Twinkle", sheetMusic.twinkleTwinkle, 250)
 
