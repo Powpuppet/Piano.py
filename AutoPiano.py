@@ -62,4 +62,4 @@ AveMaria = Song("Ave Maria", sheetMusic.aveMaria, 480)
 AllStar = Song("All Star", sheetMusic.allStar, 250)
 TwinkleTwinkle = Song("Twinkle Twinkle", sheetMusic.twinkleTwinkle, 500)
 
-LostWoods.play(GrandPiano)
+FunkyTown.play(BrightPiano)
