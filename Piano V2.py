@@ -90,11 +90,43 @@ while(not done):
             
         elif(event.type == pygame.KEYDOWN):
             #Key handlers
-            if(event.key == pygame.K_LSHIFT):
+            #Cycles through instruments
+            if(event.key == pygame.K_TAB):
                 instrumentIndex = (instrumentIndex + 1) % len(instrumentList)
-                
+            #Cycles through sheet music
             elif(event.key == pygame.K_SPACE):
                 musicIndex = (musicIndex + 1) % len(musicList)
+                
+            #Lowest keys needs mods
+            elif(event.key == pygame.K_z and (pygame.key.get_mods() & pygame.KMOD_LSHIFT)):
+                instrumentList[instrumentIndex].keys["C2"].play()
+                text = ("C2")
+            elif(event.key == pygame.K_x and (pygame.key.get_mods() & pygame.KMOD_LSHIFT)):
+                instrumentList[instrumentIndex].keys["D2"].play()
+                text = ("D2")
+            elif(event.key == pygame.K_c and (pygame.key.get_mods() & pygame.KMOD_LSHIFT)):
+                instrumentList[instrumentIndex].keys["E2"].play()
+                text = ("E2")
+            elif(event.key == pygame.K_v and (pygame.key.get_mods() & pygame.KMOD_LSHIFT)):
+                instrumentList[instrumentIndex].keys["F2"].play()
+                text = ("F2")
+            elif(event.key == pygame.K_b and (pygame.key.get_mods() & pygame.KMOD_LSHIFT)):
+                instrumentList[instrumentIndex].keys["G2"].play()
+                text = ("G2")
+            elif(event.key == pygame.K_n and (pygame.key.get_mods() & pygame.KMOD_LSHIFT)):
+                instrumentList[instrumentIndex].keys["A2"].play()
+                text = ("A2")
+            elif(event.key == pygame.K_m and (pygame.key.get_mods() & pygame.KMOD_LSHIFT)):
+                instrumentList[instrumentIndex].keys["B2"].play()
+                text = ("B2")
+            elif(event.key == pygame.K_COMMA and (pygame.key.get_mods() & pygame.KMOD_LSHIFT)):
+                instrumentList[instrumentIndex].keys["C3"].play()
+                text = ("C3")
+            elif(event.key == pygame.K_PERIOD and (pygame.key.get_mods() & pygame.KMOD_LSHIFT)):
+                instrumentList[instrumentIndex].keys["D3"].play()
+                text = ("D3")
+                
+            #Normal keys
             elif(event.key == pygame.K_z):
                 instrumentList[instrumentIndex].keys["E3"].play()
                 text = ("E3")
