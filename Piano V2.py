@@ -45,6 +45,7 @@ JingleBells = Song("Jingle Bells", sheetMusic.jingleBells, 250)
 LostWoods = Song("Lost Woods", sheetMusic.lostWoods, 250)
 ImBlue = Song("I'm Blue", sheetMusic.imBlue, 254)
 AveMaria = Song("Ave Maria", sheetMusic.aveMaria, 240)
+LetItSnow = Song("Let It Snow", sheetMusic.letItSnow, 125)
 AllStar = Song("All Star", sheetMusic.allStar, 250)
 TwinkleTwinkle = Song("Twinkle Twinkle", sheetMusic.twinkleTwinkle, 250)
 
