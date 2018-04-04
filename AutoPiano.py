@@ -20,6 +20,8 @@ for key in keys:
         continue
     grandPiano[key] = pygame.mixer.Sound("Recordings\\"  + "Grand Piano\\" + key[1] + "\\" + key + ".wav")
 
+instrumentList = ["Beep"]
+
 class Song(object):
     
     def __init__(self, name, music, tempo):
@@ -32,7 +34,7 @@ class Song(object):
         for note in range(int(len(music)/2)):
             tune = music[(note * 2): (note * 2 + 2)]
             if(tune != "  "):
-                if(instrument == "beep"):
+                if(instrument == "Beep"):
                     Beep(beep[tune], int(self.tempo))
                 else:
                     instrument.keys[tune].play()
@@ -45,6 +47,8 @@ class Instrument(object):
         self.name = name
         self.keys = {}
 
+        instrumentList.append(self)
+        
         for key in keys:
             if(key != "  "):
                 self.keys[key] = pygame.mixer.Sound("Recordings\\"  + name + "\\" + key[1] + "\\" + key + ".wav")
@@ -63,4 +67,4 @@ LetItSnow = Song("Let It Snow", sheetMusic.letItSnow, 200)
 AllStar = Song("All Star", sheetMusic.allStar, 250)
 TwinkleTwinkle = Song("Twinkle Twinkle", sheetMusic.twinkleTwinkle, 500)
 
-LetItSnow.play(GrandPiano)
+AveMaria.play(GrandPiano)
