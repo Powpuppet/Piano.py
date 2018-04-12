@@ -67,4 +67,4 @@ LetItSnow = Song("Let It Snow", sheetMusic.letItSnow, 200)
 AllStar = Song("All Star", sheetMusic.allStar, 250)
 TwinkleTwinkle = Song("Twinkle Twinkle", sheetMusic.twinkleTwinkle, 500)
 
-AveMaria.play(GrandPiano)
+LetItSnow.play(GrandPiano)
