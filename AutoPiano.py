@@ -14,12 +14,6 @@ keys = ["E2", "F2", "G2", "A2", "B2", "C3", "D3", "E3", "F3", "G3", "A3", "B3", 
 pygame.mixer.pre_init(44100, -16, 2, 2048)
 pygame.mixer.init()
 
-grandPiano = {}
-for key in keys:
-    if(key == "  "):
-        continue
-    grandPiano[key] = pygame.mixer.Sound("Recordings\\"  + "Grand Piano\\" + key[1] + "\\" + key + ".wav")
-
 instrumentList = ["Beep"]
 
 class Song(object):
@@ -67,4 +61,4 @@ LetItSnow = Song("Let It Snow", sheetMusic.letItSnow, 200)
 AllStar = Song("All Star", sheetMusic.allStar, 250)
 TwinkleTwinkle = Song("Twinkle Twinkle", sheetMusic.twinkleTwinkle, 500)
 
-LetItSnow.play(GrandPiano)
+FunkyTown.play("Beep")
